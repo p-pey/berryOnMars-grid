@@ -6,7 +6,7 @@ import { GridModal } from './lib/components';
 function Dashboard() {
   const { get, on, set } = useGrid();
   return (
-    <div className="w-screen h-screen p-5">
+    <div className="w-screen h-screen p-5 overflow-x-hidden">
       <GridModal
         handleCreate={on.create}
         handleEdit={on.update}
