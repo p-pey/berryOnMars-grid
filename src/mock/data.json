@@ -1,4 +1,10 @@
 {
+    "users": [
+        { 
+            "username": "user1",
+            "password": "A12345678a%"
+         }
+    ],
     "gridData": [
         {"id": "1","firstName": "John", "lastName": "Doe", "address": "123 Main St", "country": "USA"},
         {"id": "2", "firstName": "Jane", "lastName": "Smith", "address": "456 Oak Ave", "country": "Canada"},
@@ -11,5 +17,4 @@
         {"id" : "9", "firstName": "Linda", "lastName": "Anderson", "address": "546 Elm St", "country": "USA"},
         {"id" : "10", "firstName": "David", "lastName": "Thomas", "address": "768 Pine Ave", "country": "UK"}
     ]
-    
 }

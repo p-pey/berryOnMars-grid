@@ -7,9 +7,11 @@ import { useToggle } from '../../hooks';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { saveStorage } from '../../utils/utility';
+import { useAuthentication } from '../../store/authentication';
 
 function Login() {
   const transition = useTransition();
+  const { updateAuthentication } = useAuthentication();
   const navigate = useNavigate();
   const [loading, toggleLoading] = useToggle(false);
   const [values, setValues] = useState<loginInputs>(DEFAULT_LOGIN_INPUTS);
@@ -74,6 +76,7 @@ function Login() {
       .then(() => {
         toast.success('Successfully Logged in');
         saveStorage('isLogged', 'true');
+        updateAuthentication(true);
         navigate('/');
       })
       .catch((error) => {
